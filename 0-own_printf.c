@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -51,8 +53,10 @@ va_list formated_character;
 	}
 	else
 	{
-	_putchar(*format); character_counter++;
+	_putchar(*format);
+	character_counter++;
 	}
+
 	format++;
 	}
 	va_end(formated_character);

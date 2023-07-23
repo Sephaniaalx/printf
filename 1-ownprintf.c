@@ -60,5 +60,5 @@ va_list formated_character;
 	format++;
 	}
 	va_end(formated_character);
-	return character_counter;
+	return (character_counter);
 }

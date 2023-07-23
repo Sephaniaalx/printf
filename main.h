@@ -22,4 +22,15 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 
+/**
+ * thus are the handler and the specifier prototypes
+ */
+static void print_thechar(char c);
+static void print_thestring(const char* str);
+static void handle_thechar(va_list args);
+static void handle_thestring(va_list args);
+static void handle_thepercent(va_list args);
+
+typed void (*conversion_func)(va_list);
+
 #endif

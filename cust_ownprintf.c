@@ -8,7 +8,9 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
+
 	va_start(args, format);
+
 	int count = 0;
 
 	conversion_func conversions[] = {handle_thechar,
@@ -36,5 +38,5 @@ int _printf(const char *format, ...)
 	format++;
 	}
 	va_end(args);
-	return count;
+	return (count);
 }

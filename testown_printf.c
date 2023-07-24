@@ -24,13 +24,12 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-		putchar(format[i++]);
-		len++;
+			putchar(format[i]);
+			len++;
 		}
 		else
 		{
 			i++;
-			j = 0;
 			array_len = sizeof(format_funcs) / sizeof(format_funcs[0]);
 			for (j = 0; j < array_len; j++)
 			{
@@ -42,12 +41,10 @@ int _printf(const char *format, ...)
 			}
 			if (format[i] != format_funcs[j].specialchar)
 			{
-				i--;
-				putchar(format[i]);
+				putchar(format[--i]);
 				len++;
 			}
-		}
-		i++;
+		}i++;
 	}
 	va_end(print_f);
 	return (len);

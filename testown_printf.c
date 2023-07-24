@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	{
 		{'c', print_char},
 		{'s', print_string},
-		{'s', print_percentage}
+		{'%', print_percentage}
 	};
 
 	if (format == NULL)

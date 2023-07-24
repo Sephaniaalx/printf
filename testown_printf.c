@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	print format_funcs[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percentage},
 	};
-	if (format == NULL)
+	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
 	va_start(print_f, format);

@@ -9,13 +9,12 @@
 int _printf(const char *format, ...)
 {
 	va_list print_f;
-	size_t len = 0, i = 0;int j;int array_len;
+	size_t len = 0, i = 0;int j; int array_len;
 	print format_funcs[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'%', print_percentage}
+		{'%', print_percentage},
 	};
-
 	if (format == NULL)
 		return (-1);
 
@@ -44,7 +43,7 @@ int _printf(const char *format, ...)
 				putchar(format[--i]);
 				len++;
 			}
-		}i++;
+		} i++;
 	}
 	va_end(print_f);
 	return (len);

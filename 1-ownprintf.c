@@ -1,11 +1,11 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "main.h"
-
 /**
  * _printf - Print formatted output function to stdout
  * @format: Formatted strings for printing
  * Return: The number of characters printed except '\0'.
  */
-
 int _printf(const char *format, ...)
 {
 va_list formated_character;
@@ -14,7 +14,6 @@ va_list formated_character;
 	char *strings;
 
 	va_start(formated_character, format);
-
 	while (*format)
 	{
 	if (*format == '%')
@@ -51,7 +50,8 @@ va_list formated_character;
 	}
 	else
 	{
-	_putchar(*format); character_counter++;
+	_putchar(*format);
+	character_counter++;
 	}
 	format++;
 	}

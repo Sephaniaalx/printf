@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * _printf - main code
+ * @format: the specifier printer
+ * Return: returns a char string
  *
  */
 
@@ -8,8 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list print_f;
 	size_t len = 0, i = 0;int j;int array_len;
-	print format_funcs[] =
-	{
+	print format_funcs[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percentage}
@@ -35,7 +36,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i] == format_funcs[j].specialchar)
 				{
-					len = len + format_funcs[j].print(print_f);
+					len += format_funcs[j].print(print_f);
 					break;
 				}
 			}

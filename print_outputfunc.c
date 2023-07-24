@@ -18,19 +18,17 @@ int print_string(va_list print_f)
 	int i;
 
 	if (!string)
-	{
 		string = "(null)";
-	}
+
 	for (i = 0; string[i]; i++)
-	{
 		putchar(string[i]);
-	}
 	return (i);
 }
 
 int print_percentage(va_list print_f)
 {
 	(void)print_f;
+
 	putchar('%');
 	return (1);
 }

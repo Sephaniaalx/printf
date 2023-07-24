@@ -6,14 +6,48 @@
 
 int _printf(const char *format, ...)
 {
-	size_t len = 0, i = 0;
+	va_list print_f;
+	size_t len = 0, i = 0;int j;int array_len;
+	print format_funcs[] =
+	{
+		{'c', print_char},
+		{'s', print_string},
+		{'s', print_percentage}
+	};
 
 	if (format == NULL)
 		return (-1);
+
+	va_start(print_f, format);
 	while (format[i] != '\0')
 	{
+		if (format[i] != '%')
+		{
 		putchar(format[i++]);
 		len++;
+		}
+		else
+		{
+			i++;
+			j = 0;
+			array_len = sizeof(format_funcs) / sizeof(format_funcs[0]);
+			for (j = 0; j < array_len; j++)
+			{
+				if (format[i] == format_funcs[j].specialchar)
+				{
+					len = len + format_funcs[j].print(print_f);
+					break;
+				}
+			}
+			if (format[i] != format_funcs[j].specialchar)
+			{
+				i--;
+				putchar(format[i]);
+				len++;
+			}
+		}
+		i++;
 	}
+	va_end(print_f);
 	return (len);
 }

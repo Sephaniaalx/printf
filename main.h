@@ -21,5 +21,18 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int print_char(va_list print_f);
+int print_percentage(va_list print_f);
+int print_string(va_list print_f);
+
+/**
+ * im using this struct
+ */
+
+typedef struct printing_theformat
+{
+	char specialchar;
+	int (*print)(va_list print_f);
+} print;
 
 #endif

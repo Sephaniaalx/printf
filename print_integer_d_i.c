@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "main.h"
+#include <math.h>
 /**
 * print_integer - The function to print integers
 * @print_f: prints the number digits
@@ -21,7 +22,7 @@ int print_integer(va_list print_f)
 	}
 	do {
 	num_digits++;
-	temp %= 10;
+	temp /= 10;
 	} while (temp != 0);
 	for (i = num_digits - 1; i >= 0; i--)
 	{

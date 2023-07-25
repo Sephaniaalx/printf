@@ -1,32 +1,29 @@
 #ifndef _MAIN_H
 #define _MAIN_H
 
-/**
- * all prototypes and header files 
- * are included in this main file
- */
-
-/**
- * below are few system header files
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
 
 /**
- * below are actual prototypes
+ * _printf - main printf prototype
+ * *print - the pointer to char
+ * @format: - the last known argument
+ * Return: returns character from
  */
 
-int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list print_f);
 int print_percentage(va_list print_f);
 int print_string(va_list print_f);
+int power(int base, int exponent);
+int print_integer(va_list print_f);
 
 /**
- * im using this struct
+ * struct printing_theformat - main
+ * @print: the pointer
+ * @specialchar: the fuction description
  */
 
 typedef struct printing_theformat

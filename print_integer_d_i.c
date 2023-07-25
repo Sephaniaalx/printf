@@ -23,7 +23,7 @@ int print_integer(va_list print_f)
 		temp /= 10;
 	} while (temp != 0);
 
-	for (i = num_digits - 1; i >= 0; i--)
+	for (i = num_digits - 1; i >= 0; --i)
 	{
 		int digit = num / power(10, i);
 

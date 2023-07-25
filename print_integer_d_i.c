@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "main.h"
-#include <math.h>
 /**
 * print_integer - The function to print integers
 * @print_f: prints the number digits

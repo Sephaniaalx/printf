@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	va_list print_f;
-	size_t len = 0, i = 0;
+	int len = 0, i = 0;
 	int j;
 	int array_len;
 	print format_funcs[] = {

@@ -17,6 +17,8 @@ int _printf(const char *format, ...);
 int print_char(va_list print_f);
 int print_percentage(va_list print_f);
 int print_string(va_list print_f);
+int power(int base, int exponent);
+int print_integer(va_list print_f);
 
 /**
  * struct printing_theformat - main

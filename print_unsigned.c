@@ -25,3 +25,24 @@ unsigned int digit = num / power(10, i - 1);
 }
 return (num_digits);
 }
+/**
+ * count_digits - main function to count
+ * Return: numbers of digits
+ * @num: parameter
+ */
+unsigned int count_digits(unsigned int num)
+{
+	unsigned int num_digits = 0;
+	unsigned int temp = num;
+
+	if (num == 0)
+	{
+		return (1);
+	}
+	while (temp != 0)
+	{
+		num_digits++;
+		temp /= 10;
+	}
+	return (num_digits);
+}

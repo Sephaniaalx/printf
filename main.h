@@ -20,6 +20,8 @@ int print_string(va_list print_f);
 int power(int base, int exponent);
 int print_integer(va_list print_f);
 int print_unsigned(va_list print_f);
+unsigned int count_digits(unsigned int num);
+int help_integer(unsigned int entry);
 /**
  * struct printing_theformat - main
  * @print: the pointer

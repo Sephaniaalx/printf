@@ -8,26 +8,20 @@
 
 int print_integer(va_list print_f)
 {
-	int num = va_arg(print_f, int);
-	int num_digits = 0;
-	int temp = num;
-	int i;
+	int number = va_arg(print_f, int), len = 0;
+	unsigned int digits = number;
 
-	if (num < 0)
+	if (number < 0)
 	{
 		putchar('-');
-		num = -num;
+		digits *= -1;
+		len++;
 	}
-	do {
-		num_digits++;
-		temp /= 10;
-	} while (temp != 0);
-
-	for (i = num_digits - 1; i >= 0; i--)
+	else if (number == 0)
 	{
-		int digit = num / power(10, i);
-
-		num -= digit * power(10, i);
+		putchar('0');
+		return (1);
 	}
-	return (num_digits);
+	len += help_integer(digits);
+	return (len);
 }

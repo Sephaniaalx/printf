@@ -23,6 +23,7 @@ int print_integer(va_list print_f)
 	do {
 	num_digits++;
 	temp %= 10;
+	temp++;
 	} while (temp != 0);
 	for (i = num_digits - 1; i >= 0; i--)
 	{

@@ -12,7 +12,8 @@ int _printf(const char *format, ...)
 	int j;
 	int array_len;
 	print format_funcs[] = {
-		{'c', print_char}, {'s', print_string}, {'%', print_percentage}};
+		{'c', print_char}, {'s', print_string}, {'%', print_percentage},
+		{'d', print_integer},{'i', print_unsigned}};
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(print_f, format);

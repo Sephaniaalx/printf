@@ -17,7 +17,7 @@ int print_integer(va_list print_f)
 	if (num < 0)
 	{
 	putchar('-');
-	num -= num;
+	num = -num;
 	}
 	do {
 	num_digits++;

@@ -1,11 +1,12 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include "main.h"
 /**
-* print_integer - The function to print
-* @print_f: The printf specifier
-* Return: The character specifier
+* print_integer - The function to print integers
+* @print_f: prints the number digits
+* Return: A digit value
 */
+
 int print_integer(va_list print_f)
 {
 	int num = va_arg(print_f, int);
@@ -15,14 +16,14 @@ int print_integer(va_list print_f)
 
 	if (num < 0)
 	{
-		putchar('-');
-		num -= num;
+	putchar('-');
+	num -= num;
 	}
 	do {
-		num_digits++;
-		temp /= 10;
+	num_digits++;
+	temp /= 10;
 	} while (temp != 0);
-	for (i = num_digits - 1; i >= 0; --i)
+	for (i = num_digits - 1; i >= 0; i--)
 	{
 	int digit = num / power(10, i);
 
@@ -30,3 +31,4 @@ int print_integer(va_list print_f)
 	}
 	return (num_digits);
 }
+

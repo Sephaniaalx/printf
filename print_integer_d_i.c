@@ -2,7 +2,7 @@
 
 /**
  * print_integer - the integer function
- * @temp: temporary number
+ * @print_f: the function parameter
  * Return: returns the number digits
  */
 
@@ -26,6 +26,7 @@ int print_integer(va_list print_f)
 	for (i = num_digits - 1; i >= 0; i--)
 	{
 		int digit = num / power(10, i);
+
 		num -= digit * power(10, i);
 	}
 	return (num_digits);

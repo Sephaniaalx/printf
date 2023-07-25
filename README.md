@@ -1,7 +1,7 @@
 # A Collaborative project on printf
-## ******************* David && sephania************************
+### *************** Sephania && David ******************
 ### The project comprises of two compulsory task and fourteen advanced tasks.
-## *********************Task one***********************************
+### *********************Task Zero**********************
 ### This task requires the creation of own printf that takes care of the format specifiers %, c && s.
-## **************************** Task two***************************
+### *Task one ***************************
 ### This project takes care of the format specifiers d && i.

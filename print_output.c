@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * print_character - prints a single character
+ * print_char - prints a single character
  * @print_f: va_list containing the character to be printed
  * Return: number of character printed
  */

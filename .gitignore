@@ -1,3 +1,8 @@
 .test
 main.c
 1-ownprintf.c
+my_prinf.c
+print_usigned.c
+print_integer_d_i.c
+help_integer.c
+power_10.c
